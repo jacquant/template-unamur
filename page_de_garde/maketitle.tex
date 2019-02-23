@@ -1,0 +1,32 @@
+\makeatletter
+\def\maketitle{
+	\begin{titlepage}
+	\begin{center}
+		Université de Namur\\Faculté d'informatique \\ \vspace{5mm}
+		\textbf{\@cours} \\ \vspace{5mm}
+		Professeur(s) : \@prof\\
+		Assistant(s) : \@ass\\
+	\end{center}
+	\null\vfill
+	\begin{center}
+		{\LARGE \@title}\\
+		\vspace{1cm}
+		{\Large \@date}\\
+		\rule{15cm}{3pt}\\
+		\vspace{1cm}
+		{\Large \@author}
+	\end{center}
+	\vfill\null
+	\begin{center}
+		\includegraphics[scale=0.9]{\@logo}\\
+		Année académique 2018 - 2019\\
+		Master en Sciences Informatiques \\
+		Finalité spécialisée en Data Science
+	\end{center}
+	\end{titlepage}
+}
+\def\logo#1{\def\@logo{#1}}
+\def\prof#1{\def\@prof{#1}}
+\def\ass#1{\def\@ass{#1}}
+\def\cours#1{\def\@cours{#1}}
+\makeatother
