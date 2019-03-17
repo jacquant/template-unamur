@@ -1,38 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document configuration
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
-\usepackage[skins,minted,breakable]{tcolorbox}
-\usepackage{listings}
-\usepackage{graphicx}
-\usepackage{lscape}
-\usepackage{calc}
-\usepackage{amsmath, amsfonts}
-\usepackage{breqn}
-\usepackage{mathtools, bm}
-\usepackage{amssymb, bm}
-\usepackage{array}
-\usepackage{float}
-\usepackage{enumitem}
-\usepackage{enumerate}
-\usepackage{subcaption}
-\usepackage[ampersand]{easylist}
-\ListProperties(Hide=100, Hang=true, Progressive=3ex, Style*=-- ,
-Style2*=$\bullet$ ,Style3*=$\circ$ ,Style4*=\tiny$\blacksquare$ )
-\usepackage{xcolor}
-\usepackage{url}
-\usepackage{adjustbox}
-\usepackage{eurosym}
-\usepackage{pbox}
-\usepackage{ulem}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage {framed}
-\usepackage{tabularx}
-\usepackage[linguistics]{forest}
+\usepackage{graphicx} % The pack­age builds upon the graph­ics pack­age, pro­vid­ing a key-value in­ter­face for op­tional ar­gu­ments to the \in­clude­graph­ics com­mand. 
+\usepackage{lscape} %Mod­i­fies the mar­gins and ro­tates the page con­tents but not the page num­ber. Use­ful, for ex­am­ple, with large mul­ti­page ta­bles, as it is com­pat­i­ble with longtable and su­pertab­u­lar. 
+\usepackage{calc} % Adds in­fix ex­pres­sions to per­form arith­metic on the ar­gu­ments of the LaTeX com­mands \set­counter, \ad­dto­counter, \setlength, and \ad­dtolength.
+\usepackage{float} % Improved interface for floating objects
 \pagestyle{headings}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Gestion des marges
 \setlength{\parskip}{1ex plus 0.5ex minus 0.4ex} % Espace entre les paragraphes
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maths
+\usepackage{amsmath, amsfonts} % To type maths
+\usepackage{mathtools, bm} % Mathematical tools to use with amsmath
+\usepackage{breqn} % Automatic line breaking of displayed equations
+\usepackage{amssymb, bm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Environnement
+\usepackage[skins, breakable]{tcolorbox} % This package provides an environment for coloured and framed text boxes with a heading line. 
+\usepackage{array} % Extending the array and tabular environments
+\usepackage{subcaption} % Support for sub-captions
+\usepackage{adjustbox} % Graphics package-alike macros for “general” boxes
+\usepackage{pbox} %A variable-width \parbox command
+\usepackage{framed} % Framed or shaded regions that can break across pages
+\usepackage{tabularx} % Tabulars with adjustable-width columns
+\usepackage[linguistics]{forest} % Drawing (linguistic) trees
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code input configuration
+\usepackage{listings} %Typeset source code listings using LaTeX
+\usepackage{minted} % Highlighted source code for LaTeX
+\usemintedstyle{pastie}
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
+%        \begin{longlisting}
+%            \inputminted[firstline=1, lastline=18,
+%                linenos=true,
+%                bgcolor=Gray,
+%                frame=lines,
+%                framesep=2mm,
+%                baselinestretch=1.2,
+%                fontsize=\footnotesize,
+%                breaklines
+%                ]{python}{script/pb2/div_decoder.py}
+%        \end{longlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List packages
+\usepackage{enumerate} % Enumerate with redefinable labels
+\usepackage{enumitem} % Control layout of itemize, enumerate, description
+\usepackage[ampersand]{easylist} % Lists using a single active character
+% Configuration of easylist
+\ListProperties(Hide=100, Hang=true, Progressive=3ex, Style*=-- ,
+Style2*=$\bullet$ ,Style3*=$\circ$ ,Style4*=\tiny$\blacksquare$ )
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Color
+\usepackage{xcolor}
+% Some color declarations
+\definecolor{Gray}{gray}{0.90}
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{DarkGray}{gray}{0.1}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Input and style
+\usepackage{url} % Verbatim with URL-sensitive line breaks
+\usepackage{eurosym} % METAFONT and macros for Euro sign
+\usepackage{ulem} % Package for underlining
+\usepackage{hyperref} % Extensive support for hypertext in LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \input{page_de_garde/maketitle.tex}
-\input{preambule/config.tex}
+\input{page_de_garde/config.tex}
 \input{main.tex}

@@ -19,9 +19,9 @@
 	\vfill\null
 	\begin{center}
 		\includegraphics[scale=0.9]{\@logo}\\
-		Année académique 2018 - 2019\\
-		Master en Sciences Informatiques \\
-		Finalité spécialisée en Data Science
+		\@anneeaca\\
+		\@cursus \\
+		\@finalite
 	\end{center}
 	\end{titlepage}
 }
@@ -29,4 +29,7 @@
 \def\prof#1{\def\@prof{#1}}
 \def\ass#1{\def\@ass{#1}}
 \def\cours#1{\def\@cours{#1}}
+\def\anneeaca#1{\def\@anneeaca{#1}}
+\def\cursus#1{\def\@cursus{#1}}
+\def\finalite#1{\def\@finalite{#1}}
 \makeatother
