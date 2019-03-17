@@ -3,7 +3,7 @@ Auteur: Antoine Jacques
 Faculté d'informatique, UNamur
 
 ## Arborescence
-
+```
 .
 ├── figures
 │   └── README.md
@@ -22,6 +22,7 @@ Faculté d'informatique, UNamur
 │   └── README.md
 ├── main.tex
 └── README.md
+```
 
 ## Utilisation du template
 
@@ -44,4 +45,4 @@ Le fichier main.tex pourra être organisé comme ceci:
 
 Cette manière de travailler permet de ne pas se perdre dans ses documents latex.
 ## TODO
--[]Automatiser les références bibliographiques
+- [ ] Automatiser les références bibliographiques
